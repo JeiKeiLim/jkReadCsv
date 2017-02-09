@@ -55,6 +55,10 @@ jkReadData* jkRead_csv(char *fileName)
         }
         else if(c == '\n')
         {
+            buf[i] = '\0';
+            i = 0;
+            data->data[j][k++] = atof(buf);
+            
             j++;
             k = 0;
         }
