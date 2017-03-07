@@ -78,3 +78,29 @@ void jkRead_free(jkReadData *data)
     free(data->data);
     free(data);
 }
+
+void jkWrite_csv_double(double **data, int n_row, int n_column, char *fileName)
+{
+    FILE *fp = fopen(fileName, "w");
+    int i,j;
+    
+    if(fp == NULL)
+        return;
+    for(i=0; i<n_row; i++)
+    {
+        fprintf(fp, "%f", data[i][0]);
+        for(j=1; j<n_column; j++)
+        {
+            fprintf(fp, ",%f", data[i][j]);
+        }
+        fprintf(fp, "\n");
+    }
+    fclose(fp);
+}
+
+void jkWrite_csv(jkReadData *data, char *fileName)
+{
+    jkWrite_csv_double(data->data, data->n_row, data->n_column, fileName);
+}
+
+
