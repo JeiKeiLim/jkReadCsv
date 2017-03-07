@@ -16,6 +16,8 @@ jkReadData* <B>jkRead_csv</B>(char <B>*fileName</B>)
 void <B>jkRead_free</B>(jkReadData <B>*data</B>)
 - Free memory allocation
 
+void <B>jkWrite_csv_double</B>(double <B>**data</B>, int <B>n_row</B>, int <B>n_column</B>, char <B>*fileName</B>)
+- Write double array type data into csv format
 
 
 # Usage example
