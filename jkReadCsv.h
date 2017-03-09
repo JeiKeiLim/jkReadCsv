@@ -24,4 +24,6 @@ jkReadData* jkRead_csv(char *fileName);
 void jkRead_free(jkReadData *data);
 void jkWrite_csv(jkReadData *data, char *fileName);
 void jkWrite_csv_double(double **data, int n_row, int n_column, char *fileName);
+
+void jkReadData_printProperty(jkReadData *data);
 #endif /* jkReadCsv_h */

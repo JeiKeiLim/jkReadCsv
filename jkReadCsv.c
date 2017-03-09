@@ -104,3 +104,9 @@ void jkWrite_csv(jkReadData *data, char *fileName)
 }
 
 
+void jkReadData_printProperty(jkReadData *data)
+{
+    printf("File name : %s\nColumn : %d\nRow : %d\n", data->file_name, data->n_column, data->n_row);
+}
+
+
